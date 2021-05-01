@@ -2,6 +2,7 @@ package nl.lotrac.bv.service;
 
 import nl.lotrac.bv.model.Authority;
 import nl.lotrac.bv.model.Customer;
+import nl.lotrac.bv.model.User;
 
 import java.util.Collection;
 import java.util.Optional;
@@ -10,6 +11,9 @@ import java.util.Set;
 
 public interface CustomerService {
 
+
+
+    public abstract Collection<Customer> getCustomers();
 
 //
 //
