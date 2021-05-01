@@ -18,4 +18,6 @@ public class CustomerController {
         return new ResponseEntity<>("SECURED REST endpoint: /customers", HttpStatus.OK);
     }
 
+
+
 }
