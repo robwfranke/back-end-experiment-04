@@ -9,3 +9,5 @@ INSERT INTO authorities (username, authority) VALUES ('admin', 'ROLE_ADMIN');
 INSERT INTO authorities (username, authority) VALUES ('peter', 'ROLE_USER');
 INSERT INTO authorities (username, authority) VALUES ('peter', 'ROLE_ADMIN');
 
+
+INSERT INTO customers (customername, password,email, enabled) VALUES ('klant nr 1', '$2a$10$wPHxwfsfTnOJAdgYcerBt.utdAvC24B/DWfuXfzKBSDHO0etB1ica','klant@klant', TRUE);
