@@ -9,7 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping(value = "/customers")
-public class CustomersController {
+public class
+CustomersController {
     @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping(value = "")
     public ResponseEntity<Object> getMessage() {

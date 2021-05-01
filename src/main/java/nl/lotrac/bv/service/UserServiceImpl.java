@@ -25,15 +25,7 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
-    @Override
-    public Collection<User> getUsers() {
-        return userRepository.findAll();
-    }
 
-    @Override
-    public Optional<User> getUser(String username) {
-        return userRepository.findById(username);
-    }
 
     @Override
     public boolean userExists(String username) {
@@ -53,11 +45,6 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void deleteUser(String username) {
-        userRepository.deleteById(username);
-    }
-
-    @Override
     public void updateUser(String username, User newUser) {
         if (!userRepository.existsById(username)) throw new RecordNotFoundException();
         User user = userRepository.findById(username).get();
@@ -67,7 +54,20 @@ public class UserServiceImpl implements UserService {
         userRepository.save(user);
     }
 
+    @Override
+    public void deleteUser(String username) {
+        userRepository.deleteById(username);
+    }
 
+    @Override
+    public Optional<User> getUser(String username) {
+        return userRepository.findById(username);
+    }
+
+    @Override
+    public Collection<User> getUsers() {
+        return userRepository.findAll();
+    }
 
 
 
