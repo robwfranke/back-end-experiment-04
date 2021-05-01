@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping(value = "/customers")
 public class
-CustomersController {
+CustomerController {
     @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping(value = "")
     public ResponseEntity<Object> getMessage() {
