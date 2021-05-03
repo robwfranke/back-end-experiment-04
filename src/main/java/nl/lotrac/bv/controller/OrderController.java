@@ -1,6 +1,6 @@
 package nl.lotrac.bv.controller;
 
-import nl.lotrac.bv.service.CustomerService;
+import nl.lotrac.bv.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -11,12 +11,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 @CrossOrigin(origins = "*", maxAge=3600)
 @RestController
-@RequestMapping(value = "/customers")
+@RequestMapping(value = "/orders")
 
-public class CustomerController {
+public class OrderController {
 
     @Autowired
-    private CustomerService customerService;
+    private OrderService orderService;
 
 //    @GetMapping(value = "")
 //    public ResponseEntity<Object> getMessage() {
@@ -25,9 +25,9 @@ public class CustomerController {
 
     @GetMapping(value = "")
 
-    public ResponseEntity<Object>getCustomers(){
+    public ResponseEntity<Object>getOrders(){
 
-        return ResponseEntity.ok().body(customerService.getCustomers());
+        return ResponseEntity.ok().body(orderService.getOrders());
 
 
     }

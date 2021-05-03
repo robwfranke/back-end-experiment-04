@@ -1,12 +1,12 @@
 package nl.lotrac.bv.service;
 
-import nl.lotrac.bv.model.Customer;
+import nl.lotrac.bv.model.Order;
 import java.util.Collection;
-public interface CustomerService {
+public interface OrderService {
 
 
 
-    public abstract Collection<Customer> getCustomers();
+    public abstract Collection<Order>getOrder();
 
 //
 //

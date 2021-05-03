@@ -7,7 +7,6 @@ import java.util.Set;
 @Entity
 @Table(name = "customers")
 public class Customer {
-
     @Id
     @Column(nullable = false, unique = true)
     private String customername;
@@ -23,6 +22,7 @@ public class Customer {
 
     @Column
     private String email;
+
 
 //    @OneToMany(
 //            targetEntity = Authority.class,
